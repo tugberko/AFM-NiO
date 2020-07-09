@@ -1,5 +1,6 @@
-System = fcc NiO 
+System = NiO
 ISTART = 0
-ENCUT = 850 
-ISMEAR = 0 
+ENCUT = 400
+ISMEAR = 0
 SIGMA = 0.001
+EDIFF = 1E-8
