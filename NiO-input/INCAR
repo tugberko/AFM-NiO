@@ -1,0 +1,5 @@
+System = fcc NiO 
+ISTART = 0
+ENCUT = 850 
+ISMEAR = 0 
+SIGMA = 0.001
