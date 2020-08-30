@@ -1,0 +1,47 @@
+System = NiO
+
+# run from scratch
+ISTART = 0
+
+#Create Post processing files !We will need the WAVECAR for next step
+LWAVE=.TRUE.
+LCHARG = .TRUE.  
+
+#FOR DOS
+#LORBIT=11
+#NEDOS=5000
+#Spin polarized
+ISPIN=2
+MAGMOM=16*2 16*-2 32*0
+
+# Electronic relaxation
+ALGO = Norm
+PREC=Normal
+NELM =100
+EDIFF = 1E-05
+LRPA= .FALSE.
+ 
+#GPU  ! These are required/optimized for GPU
+LREAL=.TRUE.
+NCORE=1
+LSCAAWARE = .FALSE.
+#speed ! For a single run, 4 CPU tasks per GPU, 2 CPUs per K-Point was the ideal for Carbon
+KPAR=2
+
+#WFs
+ENCUT = 600
+ENAUG = 1200
+ISMEAR = 0  !ALGO=ALL works more reliably with Gaussian Smearing
+SIGMA = 0.01
+#NBANDS=60
+
+# Ionic relaxations
+NSW = 0
+IBRION = 2 CG optimization
+POTIM =0.2
+ISIF = 2 change the ions and cell shape (2: only ions 3: Cell and ions)
+EDIFFG = -1E-04 stopping criterium for relaxation
+
+# Other parameters
+ISYM = 0 soft symmetrization
+NWRITE = 2 most of the important information is written
