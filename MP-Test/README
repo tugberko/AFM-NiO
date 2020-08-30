@@ -1,2 +1,9 @@
 In soft-symmetrization/ , ISYM value is set to 0
+	When ISYM=0 and	MP grid is 3x3x3, the energy did not converge properly in 200 step.
+			MP grid is 5x5x5, the energy converged to -386.08116eV in 68 step. It lasts approximately 7 hours.
+			MP grid is 7x7x7, the simulation gets too slow.
+
 In symmetric-calc/ , ISYM value is not set to any value. It equals 2 by default.
+	When ISYM=2 and	MP grid is 3x3x3, the energy converged to -387.22361eV in 24 step. It lasts approximately 30 minutes.
+			MP grid is 5x5x5, the energy converged to -387.23494eV in 24 step. It lasts approximately 1 hours 45 minutes.
+			MP grid is 7x7x7, the energy converged to -387.23597eV in 23 step. It lasts approximately 3 hours.
